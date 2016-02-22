@@ -1,0 +1,39 @@
+// reference/variables/_typography.scss
+
+
+// Font Family
+
+$font-family-sansserifA: 'LANENAR_-webfont', sans-serif;
+$font-family-sansserifB: 'Open Sans', sans-serif;
+
+$font-family-body:      $font-family-sansserifA;
+$font-family-heading:   $font-family-sansserifB;
+
+
+// Font Size
+
+$font-size-base:      16px;
+
+$font-size-smaller:   11px;
+$font-size-small:     14px;
+$font-size-medium:    16px;
+$font-size-large:     18px;
+$font-size-larger:    24px;
+
+$font-title-smaller:  30px;
+$font-title-small:    36px;
+$font-title-medium:   48px;
+$font-title-large:    56px;
+$font-title-larger:   60px;
+
+// Font Weight
+
+$font-weight-light:   300;
+$font-weight-normal:  400;
+$font-weight-medium:  600;
+$font-weight-bold:    700;
+
+
+// Line Height
+$line-height-body:    1.4;
+$line-height-heading: 1.2;

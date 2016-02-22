@@ -1,0 +1,39 @@
+// reference/mixins/_button.scss
+
+
+@mixin form-general {
+	background: 0;
+	border: 0;
+	outline: 0;
+}
+//
+//primary button general style
+//
+
+@mixin primary-button ($color, $background) {
+	@include form-general;
+	@include transition(all, .2s ease-in);
+	text-transform: uppercase;
+	color: $color;
+	font-weight: $font-weight-light;
+	padding: 10px 15px;
+	letter-spacing: 1px;
+	border: 1px solid $color;
+	font-size: $font-size-larger;
+	font-family: $font-family-heading;
+	a {
+		color: $color;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:visited,
+	&:active {
+		background-color: $color;
+		color: $background;
+		a {
+			color: $background;
+		}
+	}
+
+}

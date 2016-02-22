@@ -1,0 +1,33 @@
+// components/_middle.sass
+
+@import '../reference/reference';
+
+$block: 'sc-landing__middle';
+
+.#{$block} {
+	padding: 80px;
+	clear: both;
+	&__wrapper {
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__title {
+		text-transform: uppercase;
+		color: $sc-grey-charlie;
+		font-size: $font-title-small;
+		font-weight: $font-weight-medium;
+	}
+	&__description {
+		line-height: $line-height-body;
+		font-size: $font-size-large;
+		font-weight: $font-weight-light;
+		color: $sc-grey-bravo;
+	}
+	&__button {
+		text-align: center;
+		margin:0;
+		position: relative;
+		bottom: 50px;
+	}
+}

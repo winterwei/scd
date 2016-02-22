@@ -1,0 +1,61 @@
+// components/_landing-gallery.sass
+
+@import '../reference/reference';
+
+$block: 'sc-landing__gallery';
+
+.#{$block} {
+	@include outer-container;
+	padding-bottom: 80px;
+	text-align: center;
+	&__list {
+		padding-left:0;
+		@include fill-parent();
+		@include row(table);
+		margin:0;
+	}
+	&__list:last-of-type {
+		margin-bottom: 50px;
+	}
+	&__item {
+		@include span-columns(4);
+		@include pad();
+		padding:0;
+		position: relative;
+		img {
+			width: 100%;
+			display: block;
+		}
+		&:hover .sc-landing__gallery__overlay,
+		&:active .sc-landing__gallery__overlay {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__overlay {
+		position: absolute;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		margin: 30px;
+		background: $sc-grey-50;
+		color: $white;
+		font-weight: $font-weight-light;
+		text-transform: uppercase;
+		visibility: hidden;
+		opacity: 0;
+		@include transition(all .3s ease-in);
+		.sc-text__category {
+			font-size: $font-size-large;
+			letter-spacing: 1px;
+			color: $white;
+		}
+		.sc-text__workname {
+			font-size: $font-title-medium;
+			margin-top: 25%;
+			letter-spacing: 2px;
+			color: #white !important;
+		}
+	}
+}

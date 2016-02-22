@@ -1,0 +1,55 @@
+// components/_landing-half.sass
+
+@import '../reference/reference';
+
+$block: 'sc-landing__half';
+
+.#{$block} {
+	padding: 0;
+	clear:both;
+	&__img {
+		width: 50%;
+		margin:0;
+		float: left;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	&__content {
+		width: 50%;
+		margin:0;
+		float: left;
+		padding: 50px;
+		padding-top: 10%;
+		&__wrapper {
+			max-width: 400px;
+			margin: 0 auto 0 0;
+		}
+		h2 {
+			font-size: $font-title-small;
+			color: $sc-grey-charlie;
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+			margin: 30px 0;
+		}
+		p {
+			font-size: $font-size-large;
+			line-height: $line-height-body;
+			font-weight: $font-weight-light;
+			margin: 36px 0;
+			color: $sc-grey-bravo;
+		}
+	}
+	&__inverse {
+		.sc-landing__half__img {
+			float: right;
+		}
+		.sc-landing__half__content {
+			text-align: right;
+			.sc-landing__half__content__wrapper {
+				margin: 0 0 0 auto;
+			}
+		}
+	}
+}

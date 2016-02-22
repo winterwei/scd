@@ -1,0 +1,5 @@
+// _fonts.scss
+
+@import 'reference/reference';
+
+@include font-face($font-family-body, 'LANENAR_-webfont', normal, $font-weight-normal);

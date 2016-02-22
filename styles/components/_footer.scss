@@ -1,0 +1,58 @@
+// components/_footer.sass
+
+@import '../reference/reference';
+
+$block: 'sc-footer';
+
+.#{$block} {
+	padding: 30px 50px;
+	margin-top: 50px;
+	clear: both;
+
+	&__copyright {
+		font-size: $font-size-large;
+		font-weight: $font-weight-light;
+		margin:0;
+		text-transform: uppercase;
+		display: inline-block;
+		color:$sc-grey-epsilon;
+	}
+	&__social {
+		display: inline-block;
+		margin:0;
+		padding-left: 0;
+		float: right;
+		font-size: $font-size-large;
+		position: relative;
+		bottom: 5px;
+		li {
+			list-style: none;
+			display: inline-block;
+			a {
+				text-decoration: none;
+				color: $sc-grey-epsilon;
+				display: inline-block;
+				padding: 5px 8px;
+				margin: 0 10px;
+				border-radius: 50%;
+				@include transition (all, .3s ease-in);
+				.fa {
+					display: inline-block;
+					width: 22px;
+					height: 22px;
+					text-align: center;
+				}
+				.fa-pinterest-p {
+					position: relative;
+					top:1px;
+				}
+				&:hover,
+				&:active {
+					color: $white;
+					background: $sc-grey-epsilon;
+				}
+			}
+		}
+	}
+
+}

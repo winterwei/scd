@@ -1,0 +1,35 @@
+// components/_landingheader.sass
+
+@import '../reference/reference';
+
+$block: 'sc-landingheader';
+
+.#{$block} {
+	background: url('../images/sc-bg.jpg');
+	background-color: $sc-grey-50;
+	background-blend-mode: overlay;
+	background-size: cover;
+	padding-top: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	&__h1 {
+		margin-top: 300px;
+		margin-bottom: 50px;
+		display: inline-block;
+		font-size: 68px;
+		line-height: 1.1;
+		font-weight: $font-weight-light;
+		letter-spacing: 8px;
+		color: $white;
+		padding: 0 8px;
+		//border: 2px solid $sc-grey-delta;
+		&__strong {
+			font-weight: $font-weight-bold;
+		}
+
+	}
+	&__button {
+		margin-top: 30px;
+		margin-bottom: 250px;
+	}
+}
