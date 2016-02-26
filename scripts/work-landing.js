@@ -3,7 +3,6 @@
  */
 
 (function () {
-	'use strict';
 	$('.link-to-work').on('click', function (e) {
 		e.preventDefault();
 		var idName = $(this).html();
