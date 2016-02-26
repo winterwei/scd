@@ -19,22 +19,24 @@
 
 		<header class="sc-header">
 	<div class="sc-header__logo-wrapper">
+		<a href="/">
 		<img src="../images/sc-logo.png" alt="stacey's logo">
+		</a>
 	</div>
 	<nav class="sc-header__navigation">
 		<ul class="sc-header__navigation__mainlist">
 			<li class="sc-header__navigation__item">
-				<a href="#" class="sc-header__navigation__link">About</a>
+				<a href="/about" class="sc-header__navigation__link">About</a>
 				<ul class="sc-header__navigation__sublist">
 					<li><a href="#">Team</a></li>
 					<li><a href="#">Who we are</a></li>
 				</ul>
 			</li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Services</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Work</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Press</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Contact</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Blog</a></li>
+			<li class="sc-header__navigation__item"><a href="/service" class="sc-header__navigation__link">Services</a></li>
+			<li class="sc-header__navigation__item"><a href="/work-landing" class="sc-header__navigation__link">Work</a></li>
+			<li class="sc-header__navigation__item"><a href="/press" class="sc-header__navigation__link">Press</a></li>
+			<li class="sc-header__navigation__item"><a href="/contact" class="sc-header__navigation__link">Contact</a></li>
+			<li class="sc-header__navigation__item"><a href="/blog" class="sc-header__navigation__link">Blog</a></li>
 		</ul>
 	</nav>
 </header>
@@ -43,21 +45,21 @@
 
 <section class="sc-work__wrapper">
 	<section class="sc-work__tabgroup">
-		<button class="sc-button__secondary is-checked" data-filter="*">
+		<button class="sc-button__secondary" data-filter="*" id="all">
 			All
 		</button>
-		<button class="sc-button__secondary" data-filter=".residential">
+		<button class="sc-button__secondary" data-filter=".residencial" id="residencial">
 			Residencial
 		</button>
-		<button class="sc-button__secondary" data-filter=".commercial">
+		<button class="sc-button__secondary" data-filter=".commercial" id="commercial">
 			Commercial
 		</button>
-		<button class="sc-button__secondary" data-filter=".hospitality">
+		<button class="sc-button__secondary" data-filter=".hospitality" id="hospitality">
 			Hospitality
 		</button>
 	</section>
 	<section class="grid sc-work__tablist">
-		<div class="element-item grid-item grid-item--width2 residential"><a href="#">
+		<div class="element-item grid-item grid-item--width2 residencial"><a href="#">
 			<img src="../images/sc-landing-gallery01.jpg" alt="">
 		</a>
 		</div>
@@ -65,11 +67,11 @@
 			<img src="../images/sc-landing-gallery04.jpg" alt="">
 		</a>
 		</div>
-		<div class="element-item grid-item residential"><a href="#">
+		<div class="element-item grid-item residencial"><a href="#">
 			<img src="../images/sc-landing-gallery02.jpg" alt="">
 		</a>
 		</div>
-		<div class="element-item grid-item residential"><a href="#">
+		<div class="element-item grid-item residencial"><a href="#">
 			<img src="../images/sc-landing-gallery03.jpg" alt="">
 		</a>
 		</div>
@@ -85,7 +87,7 @@
 			<img src="../images/sc-landing-service.jpg" alt="">
 		</a>
 		</div>
-		<div class="element-item grid-item residential"><a href="#">
+		<div class="element-item grid-item residencial"><a href="#">
 			<img src="../images/sc-landing-blog.jpg" alt="">
 		</a>
 		</div>
@@ -115,6 +117,7 @@
 	<script src="../scripts/vendor/isotope/isotope.pkgd.min.js"></script>
 	<script src="../scripts/vendor/imageLoaded/imagesloaded.pkgd.min.js"></script>
 	<script src="../scripts/work-home.js"></script>
+	<script src-"../scripts/work-landing.js"></script>
 	<!-- endbuild -->
 </body>
 </html>

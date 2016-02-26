@@ -56,11 +56,26 @@ $block: 'sc-header';
 		&__link {
 			@include transition(color .2s ease-in);
 			display: inline-block;
-			padding: 10px 20px;
+			padding: 0;
+			margin: 10px 20px;
 			text-decoration: none;
 			text-transform: uppercase;
 			color: $sc-grey-bravo;
 		}
+		.is-checked {
+			color: $sc-grey-delta;
+			position: relative;
+			&:before {
+				position: absolute;
+				content:'';
+				background-color: $sc-grey-delta;
+				width: 100%;
+				height: 2px;
+				left:0;
+				bottom: -8px;
+			}
+		}
+		
 		&__sublist {
 			position: absolute;
 			left: 0;

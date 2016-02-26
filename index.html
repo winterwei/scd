@@ -19,22 +19,24 @@
 
 		<header class="sc-header">
 	<div class="sc-header__logo-wrapper">
+		<a href="/">
 		<img src="images/sc-logo.png" alt="stacey's logo">
+		</a>
 	</div>
 	<nav class="sc-header__navigation">
 		<ul class="sc-header__navigation__mainlist">
 			<li class="sc-header__navigation__item">
-				<a href="#" class="sc-header__navigation__link">About</a>
+				<a href="/about" class="sc-header__navigation__link">About</a>
 				<ul class="sc-header__navigation__sublist">
 					<li><a href="#">Team</a></li>
 					<li><a href="#">Who we are</a></li>
 				</ul>
 			</li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Services</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Work</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Press</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Contact</a></li>
-			<li class="sc-header__navigation__item"><a href="#" class="sc-header__navigation__link">Blog</a></li>
+			<li class="sc-header__navigation__item"><a href="/service" class="sc-header__navigation__link">Services</a></li>
+			<li class="sc-header__navigation__item"><a href="/work-landing" class="sc-header__navigation__link">Work</a></li>
+			<li class="sc-header__navigation__item"><a href="/press" class="sc-header__navigation__link">Press</a></li>
+			<li class="sc-header__navigation__item"><a href="/contact" class="sc-header__navigation__link">Contact</a></li>
+			<li class="sc-header__navigation__item"><a href="/blog" class="sc-header__navigation__link">Blog</a></li>
 		</ul>
 	</nav>
 </header>
@@ -45,7 +47,7 @@
 	<header class="sc-landingheader">
 	<h1 class="sc-landingheader__h1">Lifestyle<span class="sc-landingheader__h1__strong">redefined</span></h1>
 	<br>
-	<button class= "sc-landingheader__button sc-button__primary sc-button__primary__white"><a href="/work-landing">View our work</a></button>
+	<button class= "sc-landingheader__button sc-button__primary sc-button__primary__white"><a href="work-landing">View our work</a></button>
 </header>
 	<section class="sc-landing__middle">
 	<div class="sc-landing__middle__wrapper">
@@ -100,7 +102,7 @@
 			</div>
 		</li>
 	</ul>
-	<button class= "sc-button__primary sc-button__primary__grey">More work</button>
+	<button class= "sc-button__primary sc-button__primary__grey sc-morework-button">More work</button>
 </section>
 	<section class="sc-landing__half">
 	<div class="sc-landing__half__img">
@@ -183,6 +185,9 @@
 
 	<!-- build:js scripts/main.min.js -->
 	<script src="scripts/main.js"></script>
+	<script src="scripts/vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="scripts/vendor/imageLoaded/imagesloaded.pkgd.min.js"></script>
+	<script src="scripts/work-home.js"></script>
 	<!-- endbuild -->
 </body>
 </html>

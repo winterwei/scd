@@ -1,24 +1,58 @@
 /*!
- * main.js
+ * work-home.js
  */
+function getHashFilter() {
+  var hash = location.hash;
+  // get filter=filterName
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
 
 (function () {
-	'use strict';
-	// init Isotope
-	var $grid = $('.grid').isotope ({
-		itemSelector: '.grid-item',
-		layoutMode: 'masonry',
-		percentPosition: true,
-		masonry: {
-			columnWidth: '.grid-sizer'
-		}
-	});
-	// layout Isotope after each image loads
+	var $grid = $('.grid');
+	$('#all').addClass('is-checked');
+	var $filterButtonGroup = $('.sc-work__tabgroup');
+	  $filterButtonGroup.on( 'click', 'button', function() {
+	    var filterAttr = $( this ).attr('data-filter');
+	    // set filter in hash
+	    location.hash = 'filter=' + encodeURIComponent( filterAttr );
+	  });
+	var isIsotopeInit = false;
+	function onHashchange() {
+    	var hashFilter = getHashFilter();
+    	if ( !hashFilter && isIsotopeInit ) {
+    	      return;
+    	}
+    	isIsotopeInit = true;
+    	$grid.isotope ({
+    		itemSelector: '.grid-item',
+    		layoutMode: 'masonry',
+    		percentPosition: true,
+    		masonry: {
+    			columnWidth: '.grid-sizer'
+    		},
+    		filter: hashFilter
+    	});
+    	if ( hashFilter ) {
+    	      $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+    	      $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+    	}
+
+	}
+
+	$(window).on( 'hashchange', onHashchange );
+
+	// trigger event handler to init Isotope
+	onHashchange();
+
 	$grid.imagesLoaded().progress( function () {
 		$grid.isotope('layout');
 	});
-	$('.sc-work__tabgroup').on( 'click', 'button', function () {
-		var filterValue = $(this).attr('data-filter');
-		$('.grid.sc-work__tablist').isotope ({ filter: filterValue });
+
+
+	//more work button from landing page(gallery section)
+	$('.sc-morework-button').on('click', function () {
+		window.location.href='/work';
 	});
 })();
