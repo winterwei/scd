@@ -25,10 +25,10 @@
 	<nav class="sc-header__navigation">
 		<ul class="sc-header__navigation__mainlist">
 			<li class="sc-header__navigation__item">
-				<a href="/about" class="sc-header__navigation__link">About</a>
+				<a href="/about" class="sc-header__navigation__link" id="about">About</a>
 				<ul class="sc-header__navigation__sublist">
-					<li><a href="#">Team</a></li>
-					<li><a href="#">Who we are</a></li>
+					<li><a href="/about/team">Team</a></li>
+					<li><a href="/about/we">Who we are</a></li>
 				</ul>
 			</li>
 			<li class="sc-header__navigation__item"><a href="/service" class="sc-header__navigation__link">Services</a></li>
@@ -39,7 +39,19 @@
 		</ul>
 	</nav>
 </header>
-
+<section class="sc-contact">
+	<section class="sc-contact__wrapper">
+		<form method="POST" action="http://formspree.io/email@email.com" class="sc-contact__form">
+			<div class="sc-contact__form__wrapper clearfix">
+				<input class= "sc-contact__name" type="text" name="name" placeholder="name">
+				<input class= "sc-contact__email" type="email" name="_replyto" placeholder="email">
+			</div>
+			<textarea class= "sc-contact__message" name="message" cols="30" rows="10" placeholder="message"></textarea>
+			<input type="text" name="_gotcha" style="display:none">
+			<input class= "sc-contact__send" type="submit" value="send">
+		</form>
+	</section>
+</section>
 <footer class = "sc-footer">
 	<p class = "sc-footer__copyright clearfix">
 		<i class="fa fa-copyright"></i> 2016 STACEY COHEN Design

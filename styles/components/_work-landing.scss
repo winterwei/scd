@@ -28,7 +28,7 @@ $block: 'sc-work-landing';
 		}
 	}
 	&__overlay {
-		background-color: $sc-grey-50;
+		background-color: $sc-grey-20;
 		position: absolute;
 		top:0;
 		bottom: 0;
@@ -38,7 +38,7 @@ $block: 'sc-work-landing';
 			display: block;
 			margin-top: 30%;
 			text-align: center;
-			background-color: rgba(255,255,255,.75);
+			background-color: rgba(255,255,255,.60);
 			padding: 10px 15px;
 			font-size: $font-title-small;
 			color: $sc-grey-delta;

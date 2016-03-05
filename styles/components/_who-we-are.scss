@@ -1,0 +1,34 @@
+// components/_who-we-are.sass
+
+@import '../reference/reference';
+
+$block: 'sc-we';
+
+.#{$block} {
+	background-image: url('../../images/bg-img.jpg');
+	background-size: cover;
+	background-color: $sc-grey-50;
+	background-blend-mode:darken;
+	padding: 80px 0;
+	&__wrapper {
+		@include outer-container;
+		color: $white;
+		padding: 0 20px;
+	}
+	h2 {
+		font-size: 64px;
+		letter-spacing: 5px;
+		margin-top: 0;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+	p {
+		font-size: 36px;
+		font-weight: 100;
+		line-height: $line-height-body;
+		letter-spacing: 3px;
+	}
+	&__strong {
+		font-weight: bold;
+	}
+}

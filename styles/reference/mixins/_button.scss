@@ -16,7 +16,7 @@
 	text-transform: uppercase;
 	color: $color;
 	font-weight: $font-weight-light;
-	padding: 10px 15px;
+	padding: 10px 25px;
 	letter-spacing: 1px;
 	border: 1px solid $color;
 	font-size: $font-size-larger;
@@ -34,6 +34,31 @@
 		a {
 			color: $background;
 		}
+	}
+
+}
+
+@mixin primary-button-a ($base, $hover: darken($base, 10%)) {
+	@include form-general;
+	@include transition(all, .2s ease-in);
+	text-transform: uppercase;
+	color: $white;
+	font-weight: $font-weight-light;
+	padding: 10px 25px;
+	letter-spacing: 1px;
+	border: 1px solid $base;
+	font-size: $font-size-larger;
+	font-family: $font-family-heading;
+	background: $base;
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:visited,
+	&:active {
+		background-color: $hover;
 	}
 
 }

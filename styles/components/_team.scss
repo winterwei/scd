@@ -1,0 +1,93 @@
+// components/_team.sass
+
+@import '../reference/reference';
+
+$block: 'sc-team';
+
+.#{$block} {
+	border-top: 1px solid $sc-grey-gamma;
+	border-bottom: 1px solid $sc-grey-gamma;
+	&__wrapper {
+		@include outer-container;
+	}
+	&__title {
+		font-size: 64px;
+		text-align: center;
+		color: $sc-grey-bravo;
+		font-weight: $font-weight-light;
+		letter-spacing: 5px;
+		margin-top: 60px;
+		margin-bottom: 50px;
+	}
+	&__stacey {
+		margin-bottom: 60px;
+		h3 {
+			font-size: 36px;
+			font-weight: $font-weight-light;
+			color: $sc-grey-charlie;
+			letter-spacing: 2px;
+			margin-top: 0;
+			margin-bottom: 25px;
+		}
+		&__img {
+			width: 60%;
+			float: left;
+			img {
+				width: 95%;
+			}
+		}
+		&__description {
+			width: 40%;
+			float: left;
+			margin: 0;
+			p {
+				line-height: $line-height-body;
+				color:$sc-grey-happy;
+				font-size: 18px;
+			}
+		}
+	}
+	&__lidija {
+		width: 49%;
+		float: left;
+		margin-right: 2%;
+		margin-bottom: 40px;
+		img {
+			width: 100%
+		}
+		h3 {
+			font-size: 36px;
+			font-weight: $font-weight-light;
+			color: $sc-grey-charlie;
+			letter-spacing: 2px;
+			margin: 15px 0;
+		}
+		p {
+			line-height: $line-height-body;
+			color:$sc-grey-happy;
+			font-size: 18px;
+		}
+	}
+	&__chantal {
+		width: 49%;
+		float: left;
+		margin: 0;
+		margin-bottom: 40px;
+		img {
+			width: 100%
+		}
+		h3 {
+			font-size: 36px;
+			font-weight: $font-weight-light;
+			color: $sc-grey-charlie;
+			letter-spacing: 2px;
+			margin: 15px 0;
+		}
+		p {
+			line-height: $line-height-body;
+			color:$sc-grey-happy;
+			font-size: 18px;
+		}
+	}
+
+}

@@ -1,0 +1,57 @@
+// components/_video.sass
+
+@import '../reference/reference';
+
+$block: 'sc-video';
+
+.#{$block} {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	@include outer-container;
+	&__list {
+		margin-top:0;
+		padding-left:0;
+		@include fill-parent();
+		@include row(table);
+	}
+	&__item {
+		list-style-type: none;
+		@include span-columns(4);
+		@include pad();
+		padding: 20px;
+		text-align: center;
+		p {
+			margin:0;
+			text-align: left;
+			width: 65%;
+			color: $white;
+			font-size: 20px;
+			line-height: $line-height-heading;
+			font-family: $font-family-heading;
+			font-weight: 300;
+		}
+		button {
+			@include primary-button($white, $sc-grey-bravo);
+			margin-top: 60px;
+			font-size: 16px;
+		}
+	}
+	.video-1 {
+		background-image: url('../../images/video-bg-01.jpg');
+		background-size: cover;
+		background-color: $sc-grey-50;
+		background-blend-mode: darken;
+	}
+	.video-2 {
+		background-image: url('../../images/video-bg-02.jpg');
+		background-size: cover;
+		background-color: $sc-grey-50;
+		background-blend-mode: darken;
+	}
+	.video-3 {
+		background-image: url('../../images/video-bg-03.jpg');
+		background-size: cover;
+		background-color: $sc-grey-50;
+		background-blend-mode: darken;
+	}
+}
