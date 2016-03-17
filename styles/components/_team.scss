@@ -1,4 +1,4 @@
-// components/_team.sass
+// about-team
 
 @import '../reference/reference';
 
@@ -13,37 +13,63 @@ $block: 'sc-team';
 	&__title {
 		font-size: 64px;
 		text-align: center;
-		color: $sc-grey-bravo;
+		color: $sc-grey-i;
 		font-weight: $font-weight-light;
 		letter-spacing: 5px;
 		margin-top: 60px;
 		margin-bottom: 50px;
+		@include media($mobile-13) {
+			font-size: 48px;
+		}
 	}
 	&__stacey {
 		margin-bottom: 60px;
+		@include media($mobile-03){
+			margin-bottom: 40px;
+		}
 		h3 {
 			font-size: 36px;
 			font-weight: $font-weight-light;
-			color: $sc-grey-charlie;
+			color: $sc-grey-i;
 			letter-spacing: 2px;
 			margin-top: 0;
 			margin-bottom: 25px;
+			@include media($mobile-13) {
+				font-size: 28px;
+			}
 		}
 		&__img {
-			width: 60%;
+			width: 70%;
 			float: left;
+			@include media($mobile-02) {
+				width: 100%;
+				float: none;
+			}
 			img {
 				width: 95%;
+				@include media($mobile-02) {
+					width: 100%;
+				}
 			}
 		}
 		&__description {
-			width: 40%;
+			width: 30%;
 			float: left;
 			margin: 0;
+			padding-right: 20px;
+			@include media($mobile-02) {
+				width: 100%;
+				float: none;
+				padding: 30px 40px;
+			}
 			p {
 				line-height: $line-height-body;
-				color:$sc-grey-happy;
+				color:$sc-grey-bravo;
 				font-size: 18px;
+				@include media($mobile-01) {
+					font-size: 16px;
+					line-height: $line-height-body;
+				}
 			}
 		}
 	}
@@ -52,20 +78,45 @@ $block: 'sc-team';
 		float: left;
 		margin-right: 2%;
 		margin-bottom: 40px;
+		@include media($mobile-03){
+			width: 100%;
+			float: none;
+			margin-left: 0;
+		}
 		img {
 			width: 100%
 		}
 		h3 {
 			font-size: 36px;
 			font-weight: $font-weight-light;
-			color: $sc-grey-charlie;
+			color: $sc-grey-i;
 			letter-spacing: 2px;
 			margin: 15px 0;
+			@include media($mobile-13) {
+				font-size: 28px;
+
+			}
+			@include media($mobile-03) {
+				padding: 0 40px;
+				padding-top: 20px;
+				
+			}
 		}
 		p {
 			line-height: $line-height-body;
-			color:$sc-grey-happy;
+			color:$sc-grey-bravo;
 			font-size: 18px;
+			@include media($mobile-01) {
+				font-size: 16px;
+				line-height: $line-height-body;
+			}
+			@include media($mobile-03) {
+				padding: 30px 40px;
+			}
+			@include media($mobile-13) {
+				margin-top: 0;
+				padding-top: 15px;
+			}
 		}
 	}
 	&__chantal {
@@ -73,20 +124,44 @@ $block: 'sc-team';
 		float: left;
 		margin: 0;
 		margin-bottom: 40px;
+		@include media($mobile-03){
+			width: 100%;
+			float: none;
+			margin-left: 0;
+		}
 		img {
 			width: 100%
 		}
 		h3 {
 			font-size: 36px;
 			font-weight: $font-weight-light;
-			color: $sc-grey-charlie;
+			color: $sc-grey-i;
 			letter-spacing: 2px;
 			margin: 15px 0;
+			@include media($mobile-13) {
+				font-size: 28px;
+			}
+			@include media($mobile-03) {
+				padding: 0 40px;
+				padding-top: 20px;
+			}
 		}
 		p {
 			line-height: $line-height-body;
-			color:$sc-grey-happy;
+			color:$sc-grey-bravo;
 			font-size: 18px;
+			@include media($mobile-01) {
+				font-size: 16px;
+				line-height: $line-height-body;
+			}
+			@include media($mobile-03) {
+				padding: 30px 40px;
+			}
+			@include media($mobile-13) {
+				margin-top: 0;
+				padding-top: 15px;
+
+			}
 		}
 	}
 

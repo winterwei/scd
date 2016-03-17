@@ -1,0 +1,136 @@
+// services
+
+@import '../reference/reference';
+@import '../vendor/bourbon/bourbon';
+@import '../vendor/neat/neat';
+
+$block: 'sc-services';
+
+.#{$block} {
+	width: 100%;
+	&__wrapper {
+		@include outer-container;
+		padding: 20px 0 40px;
+		h2 {
+			text-align: center;
+			font-size: 64px;
+			color: $sc-grey-i;
+			font-weight: 300;
+			margin-top: 80px;
+			margin-bottom: 70px;
+			letter-spacing: 5px;
+			@include media($mobile-02) {
+				font-size: 54px;
+				margin-bottom: 60px;
+			}
+			@include media($mobile-13) {
+				font-size: 36px;
+				margin-bottom: 50px;
+			}
+		}
+		h3 {
+			font-weight: 300;
+			font-size: 24px;
+			letter-spacing: 2px;
+			color: darken($sc-grey-i, 10%);
+			margin: 20px 0;
+			@include media($mobile-02) {
+				font-size: 20px;
+			}
+			@include media($mobile-13) {
+				font-size: 18px;
+			}
+		}
+		p {
+			line-height: $line-height-body;
+			font-size: 16px;
+			color: $sc-grey-bravo;
+			@include media($mobile-02) {
+				font-size: 15px;
+			}
+			@include media($mobile-13) {
+				font-size: 14px;
+			}
+		}
+	}
+	&__list-two {
+		margin-top: 0;
+		padding-left: 0;
+
+	}
+	&__item-two {
+		list-style-type: none;
+		padding: 20px 30px;
+		box-sizing: border-box;
+		@include span-columns(6);
+		@include omega(2n);
+		@include media($mobile-04) {
+			@include span-columns(12);
+		}
+	}
+	&__list-th {
+		margin-top: 0;
+		padding-left: 0;
+
+	}
+	&__item-th {
+		list-style-type: none;
+		padding: 20px 30px;
+		box-sizing: border-box;
+		@include span-columns(4);
+		@include omega(3n);
+		@include media($mobile-04) {
+			@include span-columns(12);
+		}
+	}
+	&__bg-first {
+		background-image: url('../../images/service-bg-01.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 576px;
+		width: 100%;
+		background-position: 0 -20px;
+		@include media($mobile-02) {
+			height: 350px;
+		}
+		@include media($mobile-04) {
+			height: 250px;
+		}
+		@include media($mobile-13) {
+			height: 150px;
+		}
+	}
+	&__bg-sec {
+		background-image: url('../../images/service-bg-02.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 576px;
+		width: 100%;
+		@include media($mobile-02) {
+			height: 350px;
+		}
+		@include media($mobile-04) {
+			height: 250px;
+		}
+		@include media($mobile-13) {
+			height: 150px;
+		}
+	}
+	&__bg-last {
+		background-image: url('../../images/service-bg-03.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 576px;
+		width: 100%;
+		@include media($mobile-02) {
+			height: 350px;
+		}
+		@include media($mobile-04) {
+			height: 250px;
+		}
+		@include media($mobile-13) {
+			height: 150px;
+		}
+	}
+
+}

@@ -1,4 +1,4 @@
-// components/_middle.sass
+// landing-middle;
 
 @import '../reference/reference';
 
@@ -6,23 +6,36 @@ $block: 'sc-landing__middle';
 
 .#{$block} {
 	padding: 80px;
+	@include media($mobile-10){
+		padding: 80px 20px;
+	}
 	clear: both;
 	&__wrapper {
-		max-width: 600px;
+		max-width: 820px;
 		margin: 0 auto;
 		text-align: center;
 	}
 	&__title {
 		text-transform: uppercase;
-		color: $sc-grey-charlie;
+		color: $sc-grey-i;
 		font-size: $font-title-small;
-		font-weight: $font-weight-medium;
+		font-weight: $font-weight-light;
+		@include media($mobile-10){
+			font-size: 28px;
+		}
 	}
 	&__description {
 		line-height: $line-height-body;
 		font-size: $font-size-large;
 		font-weight: $font-weight-light;
 		color: $sc-grey-bravo;
+		@include media($mobile-10){
+			font-size: 16px;
+		}
+		
+	}
+	&__center {
+		text-align: left;
 	}
 	&__button {
 		text-align: center;

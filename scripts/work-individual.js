@@ -1,6 +1,4 @@
-/*!
- * work-individual.js
- */
+
 
 (function () {
 	$('.back').on('click', function () {
@@ -15,7 +13,7 @@
 	var name = current[2];
 	lightbox.option({
 		'resizeDuration': 200,
-		'albumLabel': name + ': image %1 / %2',
+		// 'albumLabel': name + ': image %1 / %2',
 		'disableScrolling': true,
 		'positionFromTop': 50,
 		'maxHeight': 800,

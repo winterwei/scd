@@ -1,4 +1,4 @@
-// components/_button.sass
+//buttons
 
 @import '../reference/reference';
 
@@ -7,10 +7,10 @@ $block: 'sc-button';
 .#{$block} {
 	&__primary {
 		&__white {
-			@include primary-button ($white, $sc-grey-bravo);
+			@include primary-button ($white, $sc-grey-i);
 		}
 		&__grey {
-			@include primary-button ($sc-grey-bravo, $white);
+			@include primary-button ($sc-grey-i, $white);
 		}
 	}
 }

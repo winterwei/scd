@@ -1,4 +1,4 @@
-// components/_contact.sass
+// contacts
 
 @import '../reference/reference';
 
@@ -8,8 +8,8 @@ $block: 'sc-contact';
 	background-image: url('../../images/contact-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: $sc-grey-80;
-	background-blend-mode: darken;
+	//background-color: $sc-grey-80;
+	//background-blend-mode: darken;
 	padding: 80px 0;
 	text-align: center;
 	&__wrapper {
@@ -22,6 +22,9 @@ $block: 'sc-contact';
 			margin-bottom: 50px;
 		}
 		font-size: 18px;
+		@include media($mobile-05) {
+			font-size: 16px;
+		}
 		::-webkit-input-placeholder {
 		   color: $sc-grey-delta;
 		   text-transform: uppercase;
@@ -34,6 +37,9 @@ $block: 'sc-contact';
 		   text-transform: uppercase;
 		   font-size: 18;
 		   font-weight: 300;
+		   @include media($mobile-05) {
+		   	font-size: 16px;
+		   }
 		}
 
 		::-moz-placeholder {  /* Firefox 19+ */
@@ -41,6 +47,9 @@ $block: 'sc-contact';
 		   text-transform: uppercase;
 		   font-size: 18;
 		   font-weight: 300;
+		   @include media($mobile-05) {
+		   	font-size: 16px;
+		   }
 		}
 
 		:-ms-input-placeholder {
@@ -48,6 +57,9 @@ $block: 'sc-contact';
 		   text-transform: uppercase;
 		   font-size: 18;
 		   font-weight: 300;
+		   @include media($mobile-05) {
+		   	font-size: 16px;
+		   }
 		}
 	}
 
@@ -59,6 +71,9 @@ $block: 'sc-contact';
 		color: $sc-grey-delta;
 		text-transform: uppercase;
 		font-size: 18;
+		@include media($mobile-05) {
+			font-size: 16px;
+		}
 		resize: none;
 
 	}
@@ -67,12 +82,21 @@ $block: 'sc-contact';
 		width: 48%;
 		float: left;
 		margin-right:4%;
+		@include media($mobile-03) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 50px;
+		}
 		@include form-general;
 		background-color: $white;
 		padding: 20px;
 		color: $sc-grey-delta;
 		text-transform: uppercase;
 		font-size: 18;
+		@include media($mobile-05) {
+			font-size: 16px;
+		}
 
 	}
 	&__email {
@@ -80,11 +104,19 @@ $block: 'sc-contact';
 		float: left;
 		margin:0;
 		@include form-general;
+		@include media($mobile-03) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}
 		background-color: $white;
 		padding: 20px;
 		color: $sc-grey-delta;
 		text-transform: uppercase;
 		font-size: 18;
+		@include media($mobile-05) {
+			font-size: 16px;
+		}
 
 	}
 	&__send {

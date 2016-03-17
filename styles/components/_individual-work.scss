@@ -1,4 +1,4 @@
-// components/_individual-work.sass
+// individual-work
 
 @import '../reference/reference';
 
@@ -15,24 +15,44 @@ $block: 'sc-work-individual';
 	}
 	&__title {
 		text-align: center;
-		color: $sc-grey-bravo;
+		color: $sc-grey-i;
 		h2 {
 			font-weight: $font-weight-light;
 			font-size: 64px;
 			line-height: 1.2;
 			margin: 0;
 			letter-spacing: 2px;
+			@include media($mobile-08) {
+				font-size: 48px;
+			}
+			@include media($mobile-07) {
+				font-size: 36px;
+			}
 		}
 		p {
 			font-size: 24px;
 			font-weight: 100;
 			letter-spacing: 1px;
+			text-transform: uppercase;
+			@include media($mobile-08) {
+				font-size: 18px;
+			}
+			@include media($mobile-07) {
+				font-size: 16px;
+			}
 		}
 		span {
 			font-size: 18px;
 			display: inline-block;
 			position: relative;
 			top: -2px;
+			@include media($mobile-08) {
+				font-size: 14px;
+				top: -1px;
+			}
+			@include media($mobile-07) {
+				font-size: 12px;
+			}
 		}
 	}
 	&__gallery {
@@ -53,10 +73,18 @@ $block: 'sc-work-individual';
 			margin: 0 30px;
 		}
 		.view-more {
-			@include primary-button($sc-grey-bravo, $white);
+			@include primary-button($sc-grey-i, $white);
+			@include media($mobile-14) {
+				margin-bottom: 30px;
+			}
 		}
 		.back {
-			@include primary-button-a($sc-grey-bravo);
+			@include primary-button-a($sc-grey-i);
+		}
+	}
+	.sc-work-modal {
+		img {
+			width: 10%;
 		}
 	}
 }

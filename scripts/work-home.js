@@ -1,9 +1,6 @@
-/*!
- * work-home.js
- */
+
 function getHashFilter() {
   var hash = location.hash;
-  // get filter=filterName
   var matches = location.hash.match( /filter=([^&]+)/i );
   var hashFilter = matches && matches[1];
   return hashFilter && decodeURIComponent( hashFilter );
@@ -15,7 +12,6 @@ function getHashFilter() {
 	var $filterButtonGroup = $('.sc-work__tabgroup');
 	  $filterButtonGroup.on( 'click', 'button', function() {
 	    var filterAttr = $( this ).attr('data-filter');
-	    // set filter in hash
 	    location.hash = 'filter=' + encodeURIComponent( filterAttr );
 	  });
 	var isIsotopeInit = false;
@@ -43,15 +39,12 @@ function getHashFilter() {
 
 	$(window).on( 'hashchange', onHashchange );
 
-	// trigger event handler to init Isotope
 	onHashchange();
 
 	$grid.imagesLoaded().progress( function () {
 		$grid.isotope('layout');
 	});
 
-
-	//more work button from landing page(gallery section)
 	$('.sc-morework-button').on('click', function () {
 		window.location.href='/work';
 	});

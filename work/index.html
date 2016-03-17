@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Open+Sans:400,300italic,300,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
+<title>Stacey Cohen Design</title>
+	<link rel="icon" type="image/png" href="../images/SCD_favicon.png">
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<div class="container-fluid">
+	<div class="container">
 
 		<header class="sc-header">
 	<div class="sc-header__logo-wrapper">
@@ -23,6 +23,7 @@
 		</a>
 	</div>
 	<nav class="sc-header__navigation">
+		<i class="fa fa-bars sc-header__menu"></i>
 		<ul class="sc-header__navigation__mainlist">
 			<li class="sc-header__navigation__item">
 				<a href="/about" class="sc-header__navigation__link" id="about">About</a>
@@ -35,7 +36,7 @@
 			<li class="sc-header__navigation__item"><a href="/work-landing" class="sc-header__navigation__link">Work</a></li>
 			<li class="sc-header__navigation__item"><a href="/press" class="sc-header__navigation__link">Press</a></li>
 			<li class="sc-header__navigation__item"><a href="/contact" class="sc-header__navigation__link">Contact</a></li>
-			<li class="sc-header__navigation__item"><a href="/blog" class="sc-header__navigation__link">Blog</a></li>
+			<li class="sc-header__navigation__item"><a href="http://blog.staceycohendesign.com" target="_blank" class="sc-header__navigation__link">Blog</a></li>
 		</ul>
 	</nav>
 </header>
@@ -47,49 +48,155 @@
 		<button class="sc-button__secondary" data-filter="*" id="all">
 			All
 		</button>
-		<button class="sc-button__secondary" data-filter=".residencial" id="residencial">
-			Residencial
+		<button class="sc-button__secondary" data-filter=".residential" id="residential">
+			Residential
+		</button>
+		<span class="sc-work__break"></span>
+		<button class="sc-button__secondary" data-filter=".hospitality" id="hospitality">
+			Hospitality
 		</button>
 		<button class="sc-button__secondary" data-filter=".commercial" id="commercial">
 			Commercial
 		</button>
-		<button class="sc-button__secondary" data-filter=".hospitality" id="hospitality">
-			Hospitality
-		</button>
 	</section>
 	<section class="grid sc-work__tablist">
-		<div class="element-item grid-item grid-item--width2 residencial"><a href="#">
-			<img src="../images/sc-landing-gallery01.jpg" alt="">
+		<div class="element-item grid-item residential"><a href="Gilgorm/">
+			<img src="../images/residential-gilgorm.png" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">Gilgorm</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item grid-sizer hospitality"><a href="#">
-			<img src="../images/sc-landing-gallery04.jpg" alt="">
+		<div class="element-item grid-item grid-sizer hospitality"><a href="Buna-kitchen/">
+			<img src="../images/hospitality-buna.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">hospitality</p>
+			<p class="sc-text__workname">Buna's Kitchen</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item residencial"><a href="#">
-			<img src="../images/sc-landing-gallery02.jpg" alt="">
+		<div class="element-item grid-item residential"><a href="Aldershot/">
+			<img src="../images/residential-aldershot.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">Aldershot</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item residencial"><a href="#">
-			<img src="../images/sc-landing-gallery03.jpg" alt="">
+		<div class="element-item grid-item residential"><a href="Yonge/">
+			<img src="../images/residential-2a-yonge.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">Yonge</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item commercial"><a href="#">
-			<img src="../images/sc-landing-gallery05.jpg" alt="">
+		<div class="element-item grid-item commercial"><a href="Donville-kent/">
+			<img src="../images/commercial-donville-kent.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">commercial</p>
+			<p class="sc-text__workname">Donville kent</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item commercial"><a href="#">
-			<img src="../images/sc-landing-gallery06.jpg" alt="">
+		<div class="element-item grid-item commercial"><a href="Toronto-retina-institute/">
+			<img src="../images/commercial-toronto-retina.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">commercial</p>
+			<p class="sc-text__workname">TRI</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item commercial"><a href="#">
-			<img src="../images/sc-landing-service.jpg" alt="">
+		<div class="element-item grid-item residential"><a href="Belmont/">
+			<img src="../images/residential-belmont.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">Belmont</p>
+			</div>
 		</a>
 		</div>
-		<div class="element-item grid-item residencial"><a href="#">
-			<img src="../images/sc-landing-blog.jpg" alt="">
+		<div class="element-item grid-item residential"><a href="Alvin/">
+			<img src="../images/residential-alvin.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">alvin</p>
+			</div>
 		</a>
 		</div>
+		<div class="element-item grid-item residential"><a href="Old-park/">
+			<img src="../images/residential-old-park.jpeg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">old park</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Bedford/">
+			<img src="../images/residential-bedford.jpeg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">bedford</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Glengrove/">
+			<img src="../images/residential-glengrove.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">Glengrove</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Melrose/">
+			<img src="../images/residential-melrose.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">melrose</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Briar-hill/">
+			<img src="../images/residential-briar-hill.jpeg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">briar hill</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Dunvegan/">
+			<img src="../images/residential-Dunvegan.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">dunvegan</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="St-clair/">
+			<img src="../images/residential-stclair.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">St. Clair</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Bloor/">
+			<img src="../images/residential-bloor.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">bloor</p>
+			</div>
+		</a>
+		</div>
+		<div class="element-item grid-item residential"><a href="Kids/">
+			<img src="../images/residential-kids.jpg" alt="">
+			<div class="work-overlay">
+			<p class="sc-text__category">RESIDENTIAL</p>
+			<p class="sc-text__workname">kids</p>
+			</div>
+		</a>
+		</div>
+
 	</section>
 </section>
 
@@ -98,10 +205,11 @@
 		<i class="fa fa-copyright"></i> 2016 STACEY COHEN Design
 	</p>
 	<ul class="sc-footer__social">
-		<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+		<li><a href="https://www.instagram.com/staceycohendesign/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		<li><a href="https://www.facebook.com/Interiors-by-Stacey-Cohen-164309036949980/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="https://twitter.com/staceco" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="https://www.pinterest.com/staceco/" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+<li><a href="/newsletter"><i class="fa fa-envelope"></a></i></li>
 	</ul>
 </footer>
 

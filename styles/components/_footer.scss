@@ -1,4 +1,4 @@
-// components/_footer.sass
+// footer
 
 @import '../reference/reference';
 
@@ -14,13 +14,29 @@ $block: 'sc-footer';
 		margin:0;
 		text-transform: uppercase;
 		display: inline-block;
-		color:$sc-grey-epsilon;
+		color:$sc-grey-i;
+		@include media ($mobile-04) {
+			float: none;
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		@include media ($mobile-07) {
+			font-size: $font-size-medium;
+		}
 	}
 	&__social {
 		display: inline-block;
 		margin:0;
 		padding-left: 0;
 		float: right;
+		@include media ($mobile-04) {
+			float: none;
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
 		font-size: $font-size-large;
 		position: relative;
 		bottom: 5px;
@@ -29,11 +45,14 @@ $block: 'sc-footer';
 			display: inline-block;
 			a {
 				text-decoration: none;
-				color: $sc-grey-epsilon;
+				color: $sc-grey-i;
 				display: inline-block;
 				padding: 5px 8px;
 				margin: 0 10px;
 				border-radius: 50%;
+				@include media ($mobile-07) {
+					margin:0;
+				}
 				@include transition (all, .3s ease-in);
 				.fa {
 					display: inline-block;
@@ -48,7 +67,7 @@ $block: 'sc-footer';
 				&:hover,
 				&:active {
 					color: $white;
-					background: $sc-grey-epsilon;
+					background: $sc-grey-i;
 				}
 			}
 		}

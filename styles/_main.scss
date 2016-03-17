@@ -1,9 +1,11 @@
-// main.sass
 
 @import 'reference/reference';
+@import 'vendor/bourbon/bourbon';
+@import 'vendor/neat/neat';
 
 html {
 	overflow-y: scroll;
+	width: 100% !important;
 }
 
 body {
@@ -11,11 +13,12 @@ body {
 	font-size: $font-size-base;
 	font-weight: $font-weight-normal;
 	line-height: $line-height-body;
-	text-transform: uppercase;
+	width: 100% !important;
 
 	h1,h2,h3,h4,h5 {
 		font-family: $font-family-heading;
 		line-height: $line-height-heading;
+		text-transform: uppercase;
 	}
 }
 
@@ -25,4 +28,9 @@ body {
    display: block;
    height: 0;
    clear: both;
+}
+.newsletter {
+	margin: 40px 0;
+	@include outer-container;
+
 }

@@ -1,4 +1,4 @@
-// components/_header.sass
+// header
 
 @import '../reference/reference';
 
@@ -6,37 +6,102 @@ $block: 'sc-header';
 
 .#{$block} {
 	padding: 30px 50px;
+	position: relative;
+	z-index: 9000;
 	&__logo-wrapper {
 		display: inline-block;
 		margin-top: 8px;
 		img {
-			width: 291px;
-			height: 168px;
+			width: 301px;
+			height: 158px;
 			display: block;
+			@include media($mobile-05) {
+				width: 190px;
+				height: 100px;
+			}
+			@include media($mobile-07) {
+				width: 143px;
+				height: 75px;
+			}
+		}
+	}
+
+	&__menu {
+		display: none;
+		@include media($mobile-01) {
+			display: inline-block;
+			font-size: 60px;
+			margin-top: 40px;
+			color: $sc-grey-bravo;
+			cursor: pointer;
+			position: fixed;
+			top: 20px;
+			right: 30px;
+			background-color: rgba(255,255,255,.5);
+			padding: 10px 20px;
+			border-radius: 5px;
+			z-index: 10000;
+		}
+		@include media($mobile-05) {
+			font-size: 36px;
+		}
+		@include media($mobile-07) {
+			font-size: 28px;
+			margin-top: 25px;
 		}
 	}
 
 	&__navigation {
 		display: inline-block;
 		float: right;
-		font-size: 24px;
+		font-size: 22px;
 		line-height: $line-height-heading;
-		font-weight: $font-weight-light;
+		font-weight: 300;
 		font-family: $font-family-heading;
+		@include media ($mobile-01) {
+			text-align: right;
+		}
 
 		&__mainlist {
 			margin: 0;
 			padding-left:0;
 			padding-top: 70px;
+			letter-spacing: 1px;
+			@include media ($mobile-01) {
+				background-color: $white;
+				position: fixed;
+				width: 289px;
+				right:0;
+				top: 0;
+				padding: 20px;
+				height: 100vh;
+				padding-top: 180px;
+
+			}
+			@include media ($mobile-05) {
+				width: 189px;
+				font-size: 18px;
+				padding-top: 140px;
+			}
+			@include media ($mobile-07) {
+				padding-top: 110px;
+			}
 		}
 		&__item {
 			list-style: none;
 			display: inline-block;
 			position: relative;
 			@include transition(background .2s ease-in);
+			@include media ($mobile-01) {
+				display: block;
+				text-align: center;
+			}
+			@include media ($mobile-05) {
+				text-align: right;
+			}
 
 			&:hover {
-				background-color: $sc-grey-delta;
+				background-color: $sc-grey-i;
 				a {
 					color: $white;
 				}
@@ -46,11 +111,15 @@ $block: 'sc-header';
 				visibility: hidden;
 				opacity: 0;
 				@include transition(all, .3s ease-in);
+				@include media($mobile-01) {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 			&:hover .sc-header__navigation__sublist{
 				opacity: 1;
 				visibility: visible;
-				background: $sc-grey-delta;
+				background: $sc-grey-i;
 			}
 		}
 		&__link {
@@ -63,12 +132,12 @@ $block: 'sc-header';
 			color: $sc-grey-bravo;
 		}
 		.is-checked {
-			color: $sc-grey-delta;
+			color: darken($sc-grey-i, 20%);
 			position: relative;
 			&:before {
 				position: absolute;
 				content:'';
-				background-color: $sc-grey-delta;
+				background-color: darken($sc-grey-i, 20%);
 				width: 100%;
 				height: 2px;
 				left:0;
@@ -83,12 +152,21 @@ $block: 'sc-header';
 			padding-left: 0;
 			&::before {
 				content: '';
-				background: $sc-grey-foxtrot;
+				background: $sc-grey-j;
 				position: absolute;
 				top:-1px;
 				left:0;
 				width: 120px;
 				height: .5px;
+			}
+			@include media($mobile-01){
+				position: static;
+				&::before {
+					opacity: 0;
+				}
+			}
+			@include media($mobile-05){
+				width: auto;
 			}
 			li {
 				list-style: none;
@@ -101,8 +179,15 @@ $block: 'sc-header';
 					text-decoration: none;
 					text-transform: uppercase;
 					color: $white;
+					@include media($mobile-01){
+						color: $sc-grey-foxtrot;
+					}
+					@include media($mobile-05){
+						text-align: right;
+						width: auto;
+					}
 					&:hover {
-						background: $sc-grey-bravo;
+						background: $sc-grey-j;
 					}
 
 				}

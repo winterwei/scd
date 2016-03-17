@@ -1,4 +1,4 @@
-// components/_landing-half.sass
+// landing-half
 
 @import '../reference/reference';
 
@@ -11,6 +11,10 @@ $block: 'sc-landing__half';
 		width: 50%;
 		margin:0;
 		float: left;
+		@include media($mobile-02) {
+			width: 100%;
+			float: none;
+		}
 		img {
 			width: 100%;
 			display: block;
@@ -22,16 +26,31 @@ $block: 'sc-landing__half';
 		float: left;
 		padding: 50px;
 		padding-top: 10%;
+		@include media($mobile-02) {
+			width: 100%;
+			float: none;
+			text-align: center;
+			padding: 80px;
+		}
+		@include media($mobile-10){
+			padding: 80px 20px;
+		}
 		&__wrapper {
 			max-width: 400px;
 			margin: 0 auto 0 0;
+			@include media($mobile-02) {
+				margin: 0 auto;
+			}
 		}
 		h2 {
 			font-size: $font-title-small;
-			color: $sc-grey-charlie;
-			font-weight: $font-weight-bold;
+			color: $sc-grey-i;
+			font-weight: $font-weight-light;
 			text-transform: uppercase;
 			margin: 30px 0;
+			@include media($mobile-10){
+				font-size: 28px;
+			}
 		}
 		p {
 			font-size: $font-size-large;
@@ -39,16 +58,35 @@ $block: 'sc-landing__half';
 			font-weight: $font-weight-light;
 			margin: 36px 0;
 			color: $sc-grey-bravo;
+			@include media($mobile-10){
+				font-size: 16px;
+			}
 		}
 	}
 	&__inverse {
 		.sc-landing__half__img {
 			float: right;
+			@include media($mobile-02) {
+				width: 100%;
+				float: none;
+			}
 		}
 		.sc-landing__half__content {
 			text-align: right;
+			@include media($mobile-02) {
+				width: 100%;
+				float: none;
+				text-align: center;
+				padding: 80px;
+			}
+			@include media($mobile-10){
+				padding: 80px 20px;
+			}
 			.sc-landing__half__content__wrapper {
 				margin: 0 0 0 auto;
+				@include media($mobile-02) {
+					margin: 0 auto;
+				}
 			}
 		}
 	}

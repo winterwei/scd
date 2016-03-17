@@ -1,6 +1,8 @@
-// components/_landing-gallery.sass
+// landing-page-gallery
 
 @import '../reference/reference';
+@import '../vendor/bourbon/bourbon';
+@import '../vendor/neat/neat';
 
 $block: 'sc-landing__gallery';
 
@@ -11,7 +13,10 @@ $block: 'sc-landing__gallery';
 	&__list {
 		padding-left:0;
 		@include fill-parent();
-		@include row(table);
+		// @include row(table);
+		// @include media($mobile-03) {
+		// 	@include reset-display();
+		// }
 		margin:0;
 	}
 	&__list:last-of-type {
@@ -20,6 +25,12 @@ $block: 'sc-landing__gallery';
 	&__item {
 		@include span-columns(4);
 		@include pad();
+		width: 33.33%;
+		margin-right: 0;
+		@include media($mobile-03) {
+			@include span-columns(12);
+			width: 100%;
+		}
 		padding:0;
 		position: relative;
 		img {
@@ -56,6 +67,26 @@ $block: 'sc-landing__gallery';
 			margin-top: 25%;
 			letter-spacing: 2px;
 			color: #white !important;
+			@include media($mobile-15) {
+				font-size: 36px;
+			}
+			@include media($mobile-16) {
+				font-size: 32px;
+			}
+			@include media($mobile-03) {
+				font-size: 48px;
+			}
+			@include media($mobile-07) {
+				font-size: 32px;
+			}
 		}
+		a {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	.sc-morework-button {
+		margin-top: 50px;
+		margin-bottom: 30px;
 	}
 }

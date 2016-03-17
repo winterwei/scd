@@ -1,4 +1,4 @@
-// reference/mixins/_button.scss
+//mixin-button
 
 
 @mixin form-general {
@@ -6,17 +6,15 @@
 	border: 0;
 	outline: 0;
 }
-//
-//primary button general style
-//
 
 @mixin primary-button ($color, $background) {
 	@include form-general;
 	@include transition(all, .2s ease-in);
 	text-transform: uppercase;
 	color: $color;
-	font-weight: $font-weight-light;
-	padding: 10px 25px;
+	font-weight: $font-weight-lighter;
+	padding: 15px 30px;
+	line-height: 1;
 	letter-spacing: 1px;
 	border: 1px solid $color;
 	font-size: $font-size-larger;
@@ -35,7 +33,12 @@
 			color: $background;
 		}
 	}
-
+	@include media($mobile-11) {
+	font-size: 18px;
+	}
+	@include media($mobile-12) {
+	font-size: 16px;
+	}
 }
 
 @mixin primary-button-a ($base, $hover: darken($base, 10%)) {
@@ -43,9 +46,10 @@
 	@include transition(all, .2s ease-in);
 	text-transform: uppercase;
 	color: $white;
-	font-weight: $font-weight-light;
-	padding: 10px 25px;
+	font-weight: $font-weight-lighter;
+	padding: 15px 30px;
 	letter-spacing: 1px;
+	line-height: 1;
 	border: 1px solid $base;
 	font-size: $font-size-larger;
 	font-family: $font-family-heading;
@@ -60,5 +64,10 @@
 	&:active {
 		background-color: $hover;
 	}
-
+	@include media($mobile-11) {
+	font-size: 18px;
+	}
+	@include media($mobile-12) {
+	font-size: 16px;
+	}
 }

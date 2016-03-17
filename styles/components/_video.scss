@@ -1,6 +1,8 @@
-// components/_video.sass
+// landing-video
 
 @import '../reference/reference';
+@import '../vendor/bourbon/bourbon';
+@import '../vendor/neat/neat';
 
 $block: 'sc-video';
 
@@ -12,28 +14,40 @@ $block: 'sc-video';
 		margin-top:0;
 		padding-left:0;
 		@include fill-parent();
-		@include row(table);
+		
 	}
 	&__item {
 		list-style-type: none;
 		@include span-columns(4);
 		@include pad();
+		width: 33.33%;
+		margin-right:0;
 		padding: 20px;
+		@include media($mobile-03) {
+			@include span-columns(12);
+			width: 100%;
+		}
 		text-align: center;
 		p {
 			margin:0;
 			text-align: left;
 			width: 65%;
 			color: $white;
-			font-size: 20px;
+			font-size: 18px;
 			line-height: $line-height-heading;
 			font-family: $font-family-heading;
 			font-weight: 300;
+			text-transform: uppercase;
 		}
 		button {
-			@include primary-button($white, $sc-grey-bravo);
+			@include primary-button($white, $sc-grey-i);
 			margin-top: 60px;
 			font-size: 16px;
+			padding-bottom: 12px;
+			@include media($mobile-03) {
+				margin-top: 120px;
+				margin-bottom: 30px;
+			}
 		}
 	}
 	.video-1 {
